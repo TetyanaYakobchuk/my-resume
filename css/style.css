@@ -66,12 +66,28 @@
 body {
   font-family: 'Acrom';
 }
+/* COMMON*/
+.accent-btn {
+  background: var(--c-accent);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-light);
+  padding: 20px 35px;
+  outline: none;
+  border: none;
+}
 /* FRONT PAGE*/
 .front-page {
   width: 320px;
   background: var(--c-dark);
   padding: 30px 10px 55px 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .front-page-my-name {
   font-weight: bold;
@@ -80,6 +96,7 @@ body {
   text-transform: uppercase;
   color: var(--txt-c-accent);
   text-align: center;
+  margin: 35px 0 10px 0;
 }
 .front-page-profession {
   font-weight: bold;
@@ -88,16 +105,27 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: var(--txt-c-light);
+  margin-bottom: 20px;
 }
 .front-page-description {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
   color: var(--txt-c-light);
+  margin-bottom: 20px;
 }
 
 .navigation {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .hire-me-btn {
@@ -107,6 +135,7 @@ body {
   letter-spacing: 0.05em;
   color: var(--txt-c-accent);
   text-decoration: none;
+  margin-right: 20px;
 }
 
 .mobile-menu {
@@ -114,8 +143,96 @@ body {
   height: 30px;
   background: var(--c-accent);
   display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 .mobile-menu i {
   color: var(--txt-c-light);
-  width: 10px;
+}
+
+.front-page-gallery-btn {
+  margin-bottom: 40px;
+}
+.front-page-my-photo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.front-page-my-descr {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+  margin-bottom: 0 0 15px 0;
+}
+.front-page-my-video-btn {
+  border: 2px solid var(--c-accent);
+  color: var(--txt-c-accent);
+  background: transparent;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.front-page-my-video-btn .fa-play {
+  font-size: 9px;
+  padding-right: 7px;
+}
+.front-page-laptop {
+  width: 250px;
+  margin-bottom: 40px;
+}
+/* EXPERIENCE */
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-title {
+  width: 240px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+  margin: 0 0 30px 0;
+}
+
+.experience-skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.experience-dots {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+.experience-text {
+  color: var(--txt-c-light);
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0%;
+  font-size: 16px;
+  line-height: 19px;
+}
+.experience-dots-item {
+  color: var(--c-grey-blue);
+  font-size: 8px;
+  margin-right: 5px;
+}
+.experience-dots-item-accent {
+  color: var(--c-accent);
 }
