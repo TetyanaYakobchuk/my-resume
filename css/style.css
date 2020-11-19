@@ -193,9 +193,10 @@ body {
 /* EXPERIENCE */
 
 .experience-container {
-  display: flex;
+  /*  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  padding-left: 108px;
 }
 
 .experience-title {
