@@ -131,11 +131,16 @@ body {
   color: var(--txt-c-light);
   margin-bottom: 20px;
 }
+.front-page-description {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-light);
+}
 .front-page-my-descr {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  color: var(--c-light);
   margin-bottom: 20px;
   color: var(--c-light);
 }
