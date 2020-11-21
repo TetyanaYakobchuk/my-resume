@@ -78,6 +78,7 @@ body {
   padding: 20px 35px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .container {
   min-width: 320px;
@@ -86,7 +87,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  margin: auto;
+  margin: 0;
   padding: 30px 10px 55px 10px;
 }
 
@@ -112,6 +113,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 .front-page-my-name {
   font-weight: bold;
@@ -419,6 +421,7 @@ body {
 .team-projects .container {
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 0;
 }
 
 .team-projects-title {
@@ -455,4 +458,98 @@ body {
 
 .team-project-item:last-child {
   margin-bottom: 0;
+}
+
+/* CALLBACK FORM SECTION*/
+.callback-form .container {
+  margin-right: 0%;
+  width: 320px;
+}
+.callback-form-container {
+  background: var(--c-dark);
+  padding: 35px, 30px, 40px, 30px;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.callback-form-title {
+  font-weight: bold;
+  width: 260px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0, 0, 20px, 0;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+}
+
+.callback-form-descr {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-light);
+  width: 260px;
+  text-align: center;
+  margin: 0, 0, 30px, 0;
+}
+.callback-form-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 10px 15px 10px;
+  border-bottom: 1px solid var(--c-grey-blue);
+  text-align: center;
+  color: var(--c-grey-blue);
+  margin-bottom: 30px;
+}
+.submit {
+  margin: 0 30px 40px 30px;
+}
+
+/* CALCULATOR FORM SECTION */
+
+.calculator {
+  background: var(--c-dark);
+  margin-right: 0%;
+  width: 320px;
+}
+
+.calculator-icon {
+  width: 195px;
+}
+
+.calculator-descr {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+  margin: 0 0 30px 0;
+}
+
+.calculator-descr span {
+  background: var(--c-accent);
+  padding: 5px;
+}
+
+.calculator-descr .calculator-descr-accent {
+  padding: 5px 10px;
+}
+
+.calculator-title {
+  width: 270px;
+  margin-bottom: 20px;
+}
+
+.calculator-text {
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-light);
+  margin: 20px 0 30px 0;
 }
