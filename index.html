@@ -299,10 +299,54 @@
                 / The final cost depends on the technical requirements, terms, specifics
                 of your project.
             </p>
+            <form action="" class="calculator-form">
+                <div class="calculator-form-input">
+                    <label for="calculator-form-website-type" class="calculator-form-title">What should be done:</label>
+                    <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
+                        <option value="landing-page">Landing page</option>
+                        <option value="website">Website</option>
+                        <option value="cms">CMS</option>
+                        <option value="portal" selected>Portal</option>
+                        <option value="e-shop">E-shop</option>
+                    </select>
+                </div>
+                <div class="calculator-form-input">
+                    <label for="calculator-form-technologies" class="calculator-form-title">Choose preferred technologies</label>
+                    <select name="technologies" id="calculator-form-technologies" class="calculator-form-select">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JS</option>
+                        <option value="react" selected>React</option>
+                        <option value="angular">Angular</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </div>
+                <div class="calculator-form-input">
+                    <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
+                    <div class="calculator-form-input-radio-container">
+                        <input type="radio" id="calculator-form-input-card-yes" class="calculator-form-input-field" name="card-yes">
+                        <label for="calculator-form-input-card-yes" class="calculator-form-input-label">Yes</label>
+                        <input type="radio" id="calculator-form-input-card-no" class="calculator-form-input-field" name="card-no">
+                        <label for="calculator-form-input-card-no" class="calculator-form-input-label">No</label>
+                    </div>
+                </div>
+                <div class="calculator-form-input">
+                    <label for="" class="calculator-form-title">Requests reception on your email:</label>
+                    <div class="calculator-form-input-radio-container">
+                        <input type="radio" id="calculator-form-input-reseption-yes" class="calculator-form-input-field" name="card-yes">
+                        <label for="calculator-form-input-reseption-yes" class="calculator-form-input-label">Yes</label>
+                        <input type="radio" id="calculator-form-input-reseption-no" class="calculator-form-input-field" name="card-no">
+                        <label for="calculator-form-input-reseption-no" class="calculator-form-input-label">No</label>
+                    </div>
+                </div>
+                <div class="calculator-form-input">
+                    <p class="calculator-form-title">Cost:</p>
+                    <p class="calculator-form-total-cost">300$</p>
+                </div>
+                <input type="submit" value="Find out the cost —" class="accent-btn">
+            </form>
         </div>
     </section>
-
-
 </body>
 
 </html>
