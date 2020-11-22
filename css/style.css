@@ -612,3 +612,54 @@ body {
   color: var(--txt-c-dark);
   margin-bottom: 0px;
 }
+/* FOOTER SECTION */
+
+.footer-my-name {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  margin: 0%;
+}
+.footer-my-profession {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  margin: 0 0 20px 0;
+}
+.footer-my-tel {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-dark);
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.footer-my-mail {
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.social-links-item {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.social-links-item:last-child {
+  margin-right: 0;
+}
+.social-links {
+  text-align: center;
+  width: 320px;
+}
+.social-links-item-link {
+  margin-right: 35px;
+  text-decoration: none;
+  color: var(--c-dark);
+}
+.social-links-item-link:last-child {
+  margin-right: 0;
+}
