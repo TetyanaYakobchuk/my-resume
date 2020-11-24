@@ -139,6 +139,7 @@ body {
 .mobile-menu-close-btn {
   background: var(--c-accent);
   color: var(--c-light);
+  padding: 10px 14px;
 }
 .mobile-menu-items {
   display: flex;
