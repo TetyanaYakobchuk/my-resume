@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .modal{
+            display: none;
+        }
+    </style>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/choices.min.css">
@@ -123,7 +129,7 @@
         </div>
     </section>
     
-    <section class="about">
+    <section class="about" id="about">
         <div class="container container-left">
             <h3 class="section-title about-title">I code things from scratch_</h3>
             <p class="about-descr">
@@ -149,7 +155,7 @@
         </div>
     </section>
     
-    <section class="personal-projects">
+    <section class="personal-projects" id="projects">
         <div class="container">
             <h3 class="section-title personal-projects-title">
                 My personal _projects
@@ -285,7 +291,7 @@
         </div>
     </section>
 
-    <section class="calculator">
+    <section class="calculator" id="calculator">
         <div class="container">
             <h3 class="calculator-title section-title">
                 Calculate_ the cost of a future project
@@ -352,7 +358,7 @@
             </form>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <h3 class="footer-my-name">Alex Tur</h3> 
             <p class="footer-my-profession">Frontend Developer</p>
@@ -380,18 +386,20 @@
 
     <!-- MOBILE MENU -->
     <div class="modal modal-mobile-menu">
-        <div class="container mobile-menu-container">
-            <i class="fas fa-window-close modal-close-btn mobile-menu-close-btn"></i>
+        <div class="modal-mobile-content">
+            <div class="container mobile-menu-container">
+                <i class="fas fa-window-close modal-close-btn mobile-menu-close-btn"></i>
 
-            <nav class="mobile-menu-items">
-                <a href="" class="mobile-menu-item">about</a>
-                <a href="" class="mobile-menu-item">projects</a>
-                <a href="" class="mobile-menu-item">cost calculator</a>
-                <a href="" class="mobile-menu-item">contacts</a>
-            </nav>
-            <div class="mobile-menu-contacts">
-                <a href="tel:+38 (050) 505 05 05" class="mobile-menu-my-tel">+38 (050) 505 05 05</a>
-                <a href="mailto:alexturdev@gmail.com" class="mobile-menu-my-mail">alexturdev@gmail.com</a>
+                <nav class="mobile-menu-items">
+                    <a href="#about" class="mobile-menu-item">about</a>
+                    <a href="#projects" class="mobile-menu-item">projects</a>
+                    <a href="#calculator" class="mobile-menu-item">cost calculator</a>
+                    <a href="#contacts" class="mobile-menu-item">contacts</a>
+                </nav>
+                <div class="mobile-menu-contacts">
+                    <a href="tel:+38 (050) 505 05 05" class="mobile-menu-my-tel">+38 (050) 505 05 05</a>
+                    <a href="mailto:alexturdev@gmail.com" class="mobile-menu-my-mail">alexturdev@gmail.com</a>
+                </div>
             </div>
         </div>
     </div>
