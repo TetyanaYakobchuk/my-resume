@@ -307,6 +307,7 @@
                 of your project.
             </p>
             <form action="" class="calculator-form">
+
                 <div class="calculator-form-input">
                     <label for="calculator-form-website-type" class="calculator-form-title">What should be done:</label>
                     <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
@@ -317,6 +318,7 @@
                         <option value="e-shop:2000">E-shop</option>
                     </select>
                 </div>
+
                 <div class="calculator-form-input">
                     <label for="calculator-form-technologies" class="calculator-form-title">Choose preferred technologies</label>
                     <select name="technologies" id="calculator-form-technologies" class="calculator-form-select" multiple>
@@ -328,6 +330,7 @@
                         <option value="php:2000">PHP</option>
                     </select>
                 </div>
+
                 <div class="calculator-form-input">
                     <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
 
@@ -339,6 +342,7 @@
                         <label for="calculator-form-input-cart-no" class="calculator-form-input-label">No</label>
                     </div>
                 </div>
+
                 <div class="calculator-form-input">
                     <label for="" class="calculator-form-title">Requests reception on your email:</label>
 
@@ -350,10 +354,12 @@
                         <label for="calculator-form-input-reseption-no" class="calculator-form-input-label">No</label>
                     </div>
                 </div>
+
                 <div class="calculator-form-input">
                     <p class="calculator-form-title">Cost:</p>
                     <p class="calculator-form-total-cost">300$</p>
                 </div>
+
                 <input type="submit" value="Find out the cost —" class="accent-btn">
             </form>
         </div>
@@ -403,11 +409,21 @@
             </div>
         </div>
     </div>
-</div>
-<div class="modal" id="my-video-modal">
-    <div class="my-video-container">
+</div> 
+
+<div class="modal modal-area-bgd" id="my-video-modal">
+    <div class="my-video-container"> /*при клике мимо модалки она закроется*/
         <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
-        <video class="my-video-content" src="Ratatouille-promo-trailer.mpg" controls></video>
+        <video class="my-video-content modal-area-content" src="Ratatouille-promo-trailer.mpg" controls></video>
+    </div>
+</div>
+
+<div class="modal modal-request-received" id="request-received">
+    <div class="request-received-container">
+        <i class="fas fa-times modal-close-btn"></i>
+        <h3 class="request-received-title">{thanks}</h3>
+        <p class="request-received-primary-msg">I've received your request/</p>
+        <p class="request-received-secondary-msg">I will contact you soon =)</p>
     </div>
 </div>
 
