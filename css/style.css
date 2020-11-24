@@ -66,7 +66,9 @@
 body {
   font-family: 'Acrom';
 }
+
 /* COMMON*/
+
 .accent-btn {
   background: var(--c-accent);
   font-weight: bold;
@@ -102,6 +104,80 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: var(--txt-c-light);
+}
+/* MODALS */
+.modal {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-mobile-menu {
+  background: var(--c-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mobile-menu-container {
+  height: 70%;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.modal-close-btn {
+  font-size: 18px;
+  position: absolute;
+  color: var(--c-grey-blue);
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.mobile-menu-close-btn {
+  background: var(--c-accent);
+  color: var(--c-light);
+}
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-item {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--txt-c-grey);
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-my-tel {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-dark);
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.mobile-menu-my-mail {
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-dark);
+  text-decoration: none;
+  margin-bottom: 5px;
 }
 
 /* FRONT PAGE*/
