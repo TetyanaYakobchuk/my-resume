@@ -24,7 +24,7 @@
             </a>
             <div class="navigation-part">
                 <a href="" class="hire-me-btn">— HIRE ME</a>
-                <a href="" class="mobile-menu">
+                <a href="" class="mobile-menu" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </a>
             </div>
@@ -46,7 +46,7 @@
     
         <p class="front-page-my-descr">About me in 2 minutes</p>
     
-        <button class="front-page-my-video-btn">
+        <button class="front-page-my-video-btn" id="my-video-btn">
             <i class="fas fa-play"></i>
             PLAY
         </button>
@@ -385,7 +385,7 @@
 <div class="modals-wrapper">
 
     <!-- MOBILE MENU -->
-    <div class="modal modal-mobile-menu">
+    <div class="modal modal-mobile-menu" id="mobile-menu">
         <div class="modal-mobile-content">
             <div class="container mobile-menu-container">
              <i class="fas fa-times modal-close-btn mobile-menu-close-btn"></i>
@@ -404,7 +404,7 @@
         </div>
     </div>
 </div>
-<div class="modal modal-active">
+<div class="modal" id="my-video-modal">
     <div class="my-video-container">
         <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
         <video class="my-video-content" src="Ratatouille-promo-trailer.mpg" controls></video>
@@ -413,5 +413,6 @@
 
 <script src="js/choices.min.js"></script>
 <script src="js/calculator.js"></script>
+<script src="js/modals.js"></script>
 </body>
 </html>
