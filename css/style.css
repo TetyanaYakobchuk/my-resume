@@ -160,7 +160,7 @@ body {
 }
 
 .body-scroll-disable {
-  overflow: hidden;
+  overflow: hidden; /* чтоб не скроллили с вкл модалкой */
 }
 
 /* MOBILE MENU MODAL*/
@@ -220,12 +220,59 @@ body {
 
 .my-video-content {
   width: 100%;
+  padding-right: 100px;
 }
 
 .my-video-close-btn {
   background: var(--c-light);
   color: var(--c-dark);
   padding: 10px 14px;
+}
+/* REQUEST RECEIVED */
+.modal-request-received {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.request-received-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: var(--txt-c-accent);
+  margin-bottom: 20px;
+  margin-top: 0%;
+}
+.request-received-primary-msg {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-c-dark);
+  margin-bottom: 20px;
+  margin-top: 0%;
+}
+.request-received-secondary-msg {
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--txt-c-dark);
+  width: 185px;
+  margin: 0%;
+}
+.request-received-container {
+  background: var(--c-light);
+  padding: 80px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* FRONT PAGE*/
