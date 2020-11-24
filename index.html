@@ -389,43 +389,44 @@
 
     <!-- MODALS -->
 <div class="modals-wrapper">
-
-    <!-- MOBILE MENU -->
+        <!-- MOBILE MENU -->
     <div class="modal modal-mobile-menu" id="mobile-menu">
-        <div class="modal-mobile-content">
-            <div class="container mobile-menu-container">
-             <i class="fas fa-times modal-close-btn mobile-menu-close-btn"></i>
-   
-                <nav class="mobile-menu-items">
-                    <a href="#about" class="mobile-menu-item">about</a>
-                    <a href="#projects" class="mobile-menu-item">projects</a>
-                    <a href="#calculator" class="mobile-menu-item">cost calculator</a>
-                    <a href="#contacts" class="mobile-menu-item">contacts</a>
-                </nav>
-                <div class="mobile-menu-contacts">
-                    <a href="tel:+38 (050) 505 05 05" class="mobile-menu-my-tel">+38 (050) 505 05 05</a>
-                    <a href="mailto:alexturdev@gmail.com" class="mobile-menu-my-mail">alexturdev@gmail.com</a>
+            <div class="modal-mobile-content">
+                <div class="container mobile-menu-container">
+                <i class="fas fa-times modal-close-btn mobile-menu-close-btn"></i>
+    
+                    <nav class="mobile-menu-items">
+                        <a href="#about" class="mobile-menu-item">about</a>
+                        <a href="#projects" class="mobile-menu-item">projects</a>
+                        <a href="#calculator" class="mobile-menu-item">cost calculator</a>
+                        <a href="#contacts" class="mobile-menu-item">contacts</a>
+                    </nav>
+                    <div class="mobile-menu-contacts">
+                        <a href="tel:+38 (050) 505 05 05" class="mobile-menu-my-tel">+38 (050) 505 05 05</a>
+                        <a href="mailto:alexturdev@gmail.com" class="mobile-menu-my-mail">alexturdev@gmail.com</a>
+                    </div>
                 </div>
             </div>
+    </div>
+
+    <div class="modal modal-area-bgd" id="my-video-modal">
+        <div class="my-video-container"> /*при клике мимо модалки она закроется*/
+            <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
+            <video class="my-video-content modal-area-content" src="Ratatouille-promo-trailer.mpg" controls></video>
         </div>
     </div>
-</div> 
 
-<div class="modal modal-area-bgd" id="my-video-modal">
-    <div class="my-video-container"> /*при клике мимо модалки она закроется*/
-        <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
-        <video class="my-video-content modal-area-content" src="Ratatouille-promo-trailer.mpg" controls></video>
+    <div class="modal modal-request-received" id="request-received">
+        <div class="request-received-container">
+            <i class="fas fa-times modal-close-btn"></i>
+            <h3 class="request-received-title">{thanks}</h3>
+            <p class="request-received-primary-msg">I've received your request/</p>
+            <p class="request-received-secondary-msg">I will contact you soon =)</p>
+        </div>
     </div>
+    
 </div>
 
-<div class="modal modal-request-received" id="request-received">
-    <div class="request-received-container">
-        <i class="fas fa-times modal-close-btn"></i>
-        <h3 class="request-received-title">{thanks}</h3>
-        <p class="request-received-primary-msg">I've received your request/</p>
-        <p class="request-received-secondary-msg">I will contact you soon =)</p>
-    </div>
-</div>
 
 <script src="js/choices.min.js"></script>
 <script src="js/calculator.js"></script>
