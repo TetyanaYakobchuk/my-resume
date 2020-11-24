@@ -158,6 +158,11 @@ body {
   right: 16px;
   cursor: pointer;
 }
+
+.body-scroll-disable {
+  overflow: hidden;
+}
+
 /* MOBILE MENU MODAL*/
 .mobile-menu-close-btn {
   background: var(--c-accent);
