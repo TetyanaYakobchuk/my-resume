@@ -128,7 +128,8 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container container-left">
             <h3 class="section-title about-title">I code things from scratch_</h3>
@@ -155,6 +156,7 @@
         </div>
     </section>
     
+    <!-- PERSONAL PROJECTS -->
     <section class="personal-projects" id="projects">
         <div class="container">
             <h3 class="section-title personal-projects-title">
@@ -235,6 +237,7 @@
         </div>
     </section>
     
+    <!-- TEAM PROJECTS -->
     <section class="team-projects">
         <div class="container">
             <span class="team-projects-title-bgd">TEAM</span>
@@ -276,6 +279,7 @@
         </div>
     </section>
 
+    <!-- CALLBACK FORM -->
     <section class="callback-form">
         <div class="container">
             <form action="" class="callback-form-container">
@@ -283,14 +287,15 @@
                 <p class="callback-form-descr">
                     Leave a request to discuss the task and technical requirements
                 </p>
-                <input type="text" class="callback-form-input" placeholder="Name">
-                <input type="email" class="callback-form-input" placeholder="Email">
-                <input type="tel" class="callback-form-input" pattern="[0-9]{3}-[0-9]{3}" placeholder="Phone">
+                <input type="text" class="callback-form-input" placeholder="Name" id="callback-form-input-name">
+                <input type="email" class="callback-form-input" placeholder="Email" id="callback-form-input-email">
+                <input type="tel" class="callback-form-input" placeholder="+380 (__) ___ - __ - __" id="callback-form-input-phone">
                 <input type="submit" class="accent-btn submit" value="Discuss the project  —">
             </form>
         </div>
     </section>
 
+    <!-- CALCULATOR -->
     <section class="calculator" id="calculator">
         <div class="container">
             <h3 class="calculator-title section-title">
@@ -364,6 +369,8 @@
             </form>
         </div>
     </section>
+
+    <!-- FOOTER -->
     <footer class="footer" id="contacts">
         <div class="container">
             <h3 class="footer-my-name">Alex Tur</h3> 
@@ -388,7 +395,8 @@
     </footer>
 
     <!-- MODALS -->
-<div class="modals-wrapper">
+    <div class="modals-wrapper">
+    
     <!-- MOBILE MENU -->
     <div class="modal modal-mobile-menu" id="mobile-menu">
             <div class="modal-mobile-content">
@@ -408,15 +416,17 @@
                 </div>
             </div>
     </div>
-
+    
+    <!-- MY VIDEO -->
     <div class="modal modal-area-bgd" id="my-video-modal">
         <div class="my-video-container"> /*при клике мимо модалки она закроется*/
             <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
             <video class="my-video-content modal-area-content" src="Ratatouille-promo-trailer.mpg" controls></video>
         </div>
     </div>
-
-    <div class="modal modal-request-received" id="request-received">
+    
+    <!-- REQUEST RECEIVED -->
+    <div class="modal modal-request-received modal-active" id="request-received">
         <div class="request-received-container">
             <i class="fas fa-times modal-close-btn"></i>
             <h3 class="request-received-title">{thanks}</h3>
@@ -424,8 +434,8 @@
             <p class="request-received-secondary-msg">I will contact you soon =)</p>
         </div>
     </div>
-    <!-- PERSONAL PROJECTS FULL STACK -->
     
+    <!-- PERSONAL PROJECTS FULL STACK -->
     <div class="modal project-modal modal-area-bgd" id="personal-project-full-stack">
         <div class="project-modal-container modal-area-content">
             <i class="fas fa-times modal-close-btn"></i>
@@ -481,7 +491,6 @@
     </div>
     
     <!-- PERSONAL PROJECTS PRO-TEST -->
-    
     <div class="modal project-modal modal-area-bgd" id="personal-project-pro-test">
         <div class="project-modal-container modal-area-content">
             <i class="fas fa-times modal-close-btn"></i>
@@ -503,7 +512,6 @@
     </div>
     
     <!-- PERSONAL PROJECTS GOIT -->
-    
     <div class="modal project-modal modal-area-bgd" id="personal-project-goit">
         <div class="project-modal-container modal-area-content">
             <i class="fas fa-times modal-close-btn"></i>
@@ -535,7 +543,6 @@
     </div>
     
     <!-- TEAM PROJECTS  QUESTIFY -->
-    
     <div class="modal project-modal modal-area-bgd" id="team-project-questify">
         <div class="project-modal-container modal-area-content">
             <i class="fas fa-times modal-close-btn"></i>
@@ -556,7 +563,6 @@
     </div>
     
     <!-- TEAM PROJECTS TEST IT -->
-    
     <div class="modal project-modal modal-area-bgd" id="team-project-it-test">
         <div class="project-modal-container modal-area-content">
             <i class="fas fa-times modal-close-btn"></i>
@@ -582,5 +588,6 @@
 <script src="js/calculator.js"></script>
 <script src="js/project-modals.js"></script>
 <script src="js/modals.js"></script>
+<script src="js/callback-form.js"></script>
 </body>
 </html>
