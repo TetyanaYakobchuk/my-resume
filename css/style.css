@@ -725,6 +725,11 @@ body {
   color: var(--c-grey-blue);
   margin-bottom: 30px;
 }
+
+.callback-form-input-error {
+  border: 1px solid red;
+}
+
 .submit {
   margin: 0 30px 40px 30px;
 }
