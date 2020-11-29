@@ -1296,4 +1296,18 @@ body {
     top: 35px;
     left: 274px;
   }
+  .mobile-menu-items {
+    flex-direction: row;
+    margin-left: 120px;
+  }
+  .mobile-menu-item {
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+  .mobile-menu-item:last-child {
+    margin-right: 0;
+  }
+  .front-page-main-info {
+    width: 387px;
+  }
 }
