@@ -519,9 +519,9 @@ body {
 }
 /* ABOUT PAGE */
 
-.container {
+/* .container {
   width: min-content;
-}
+} */
 .about {
   min-width: 320px;
   display: flex;
@@ -596,7 +596,7 @@ body {
 
 .personal-projects {
   background: var(--c-dark);
-  width: min-content;
+  /* width: min-content; */
 }
 
 .personal-project-item-container {
@@ -664,9 +664,9 @@ body {
 }
 
 /* TEAM PROJECT */
-.team-projects {
+/* .team-projects {
   width: min-content;
-}
+} */
 
 .team-projects .container {
   position: relative;
@@ -713,7 +713,7 @@ body {
 /* CALLBACK FORM SECTION*/
 .callback-form .container {
   margin-right: 0%;
-  width: 320px;
+  /* width: 320px; */
 }
 .callback-form-container {
   background: var(--c-dark);
@@ -770,7 +770,7 @@ body {
 .calculator {
   background: var(--c-dark);
   margin-right: 0%;
-  width: 320px;
+  /* width: 320px; */
 }
 .calculator .container {
   padding-bottom: 75px;
@@ -1207,6 +1207,14 @@ body {
     align-items: flex-start;
     order: 2;
     z-index: 2;
+    position: relative;
+  }
+  .front-page-my-photo {
+    position: absolute;
+    width: 256px;
+    z-index: 1;
+    right: -125px;
+    bottom: 330px;
   }
   .front-page-description {
     text-align: left;
