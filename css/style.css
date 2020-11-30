@@ -1211,7 +1211,7 @@ body {
     display: block;
   }
   .front-page-my-name {
-    z-index: 4;
+    z-index: 2;
   }
   .front-page-profession {
     font-size: 70px;
@@ -1219,7 +1219,7 @@ body {
     width: 510px;
     margin-left: -60px;
     margin-bottom: 35px;
-    z-index: 4;
+    z-index: 2;
   }
   .experience-wrapper {
     order: 1;
@@ -1230,6 +1230,7 @@ body {
     order: 2;
     z-index: 2;
     position: relative;
+    width: 387px;
   }
   .front-page-my-photo {
     position: absolute;
@@ -1241,6 +1242,7 @@ body {
   .front-page-description {
     text-align: left;
     margin-bottom: 65px;
+    z-index: 2;
   }
   .front-page-gallery-btn {
     width: 387px;
@@ -1418,5 +1420,76 @@ body {
   }
   .project-modal-container {
     padding: 95px;
+  }
+  .about-title {
+    font-size: 70px;
+    line-height: 84px;
+    width: 620px;
+    margin-top: 0;
+  }
+
+  .about-text {
+    width: 406px;
+  }
+  .about-text:last-child {
+    width: 388px;
+    margin: 0;
+  }
+
+  .about-content-wrapper {
+    position: relative;
+  }
+
+  .about .container {
+    flex-direction: row;
+    padding: 135px 10px;
+    justify-content: space-between;
+  }
+
+  .about-projects-bar {
+    background: var(--c-accent);
+    width: 159px;
+    height: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px 5px;
+    margin-bottom: 35px;
+    margin-top: 15px;
+  }
+
+  .about-projects {
+    z-index: 2;
+  }
+
+  .about-projects-count {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 78px;
+    color: var(--txt-c-light);
+    margin: 0;
+  }
+
+  .about-projects-text {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 135%;
+    color: var(--txt-c-dark);
+    text-transform: uppercase;
+    width: 125px;
+  }
+
+  .about-img-text {
+    font-size: 250px;
+    line-height: 300px;
+    right: -223px;
+    top: -23px;
+    z-index: 1;
+  }
+
+  .about-img {
+    width: 421px;
+    height: 455px;
+    left: -35px;
   }
 }
