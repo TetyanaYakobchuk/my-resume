@@ -32,6 +32,7 @@
   /* animation */
   --animation-fast: 0.1s;
   --animation-slow: 0.3s;
+  --animation-transition: all 0.2s ease-in-out; /* плавный вход-выход */
 }
 
 @font-face {
@@ -100,6 +101,12 @@ body {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  transition: var(--animation-transition); /*  плавная анимация на кнопке */
+}
+.accent-btn:hover {
+  outline: 1px solid var(--c-accent); /* с бордером кнопки прыгали */
+  background: transparent;
+  color: var(--txt-c-accent);
 }
 .container {
   min-width: 320px;
@@ -108,7 +115,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   padding: 30px 10px 55px 10px;
 }
 
@@ -195,8 +202,12 @@ body {
   text-decoration: none;
   text-align: center;
   margin-bottom: 35px;
+  transition: var(--animation-transition);
 }
-
+.mobile-menu-item:hover {
+  color: var(--txt-c-accent);
+  font-size: 18px;
+}
 .mobile-menu-contacts {
   display: flex;
   flex-direction: column;
@@ -352,7 +363,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+.logo-link {
+  transition: var(--animation-transition);
+}
+.logo-link:hover {
+  transform: scale(1.1); /* увеличила на 110% */
+}
 .front-page-main-info,
 .front-page-my-info,
 .front-page-about-me-container {
@@ -462,13 +478,18 @@ body {
   color: var(--txt-c-accent);
   background: transparent;
   padding: 10px 40px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
   align-items: center;
   margin-bottom: 35px;
   cursor: pointer;
+}
+.front-page-my-video-btn:hover {
+  background: var(--c-accent);
+  color: var(--txt-c-light);
+  transition: var(--animation-transition);
 }
 .front-page-my-video-btn .fa-play {
   font-size: 9px;
@@ -724,7 +745,7 @@ body {
 .callback-form-container {
   background: var(--c-dark);
   padding: 35px, 30px, 40px, 30px;
-  margin-right: 0;
+  /* margin-right: 0; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -780,7 +801,7 @@ body {
 .calculator {
   background: var(--c-dark);
   margin-right: 0%;
-  /* width: 320px; */
+  /* width: 100%; */
 }
 .calculator .container {
   padding-bottom: 75px;
@@ -793,6 +814,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .calculator-descr {
   font-weight: bold;
