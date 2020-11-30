@@ -1234,6 +1234,7 @@ body {
   }
   .front-page-my-name {
     z-index: 2;
+    text-align: start;
   }
   .front-page-profession {
     font-size: 70px;
