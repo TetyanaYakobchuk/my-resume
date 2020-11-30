@@ -77,14 +77,16 @@ body {
 }
 
 /* COMMON*/
-/* .tablet-element {
+.tablet-element {
   display: none;
-} */
+}
 
 .desktop-element {
   display: none;
 }
-
+.mobile-element {
+  display: block;
+}
 .accent-btn {
   background: var(--c-accent);
   font-weight: bold;
@@ -124,6 +126,7 @@ body {
 }
 /* MODALS */
 .modal {
+  z-index: 3;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -350,7 +353,9 @@ body {
   align-items: center;
 }
 
-.front-page-main-info {
+.front-page-main-info,
+.front-page-my-info,
+.front-page-about-me-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -463,6 +468,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 35px;
+  cursor: pointer;
 }
 .front-page-my-video-btn .fa-play {
   font-size: 9px;
@@ -1387,5 +1393,30 @@ body {
   }
   .calculator-icon {
     top: 360px;
+  }
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-main-content {
+    width: calc(50% + 100px);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-my-profession {
+    margin-bottom: 0%;
+  }
+  .request-received-container {
+    padding: 60px 130px 80px 130px;
+  }
+  .request-received-primary-msg {
+    width: 350px;
+  }
+  .request-received-secondary-msg {
+    width: auto;
+  }
+  .project-modal-container {
+    padding: 95px;
   }
 }
