@@ -83,10 +83,10 @@ body {
 }
 
 .desktop-element {
-  display: none;
+  display: none !important; /* пришлось поставить чтоб перебить стрелочки для свайпа на моб версии */
 }
 .mobile-element {
-  display: block;
+  display: block !important; /* и оставить их в планшетной и десктопной версии*/
 }
 .accent-btn {
   background: var(--c-accent);
@@ -689,7 +689,11 @@ body {
   padding: 15px 30px 15px 10px;
   margin-bottom: 30px;
 }
-
+.swiper-container {
+  width: 300px;
+  height: auto;
+  margin-bottom: 30px;
+}
 /* TEAM PROJECT */
 /* .team-projects {
   width: min-content;
@@ -1014,16 +1018,13 @@ body {
     min-width: 640px;
   }
   .mobile-element {
-    display: none;
+    display: none !important;
   }
   .tablet-element {
-    display: block;
+    display: block !important;
   }
-
-  .front-page-my-name {
-    font-size: 36px;
-    line-height: 43px;
-    margin-bottom: 0;
+  .swiper-container {
+    width: 600px;
   }
   .front-page-profession {
     margin: 20px 0 30px 0;
@@ -1230,11 +1231,10 @@ body {
     display: none;
   }
   .desktop-element {
-    display: block;
+    display: block !important;
   }
-  .front-page-my-name {
-    z-index: 2;
-    text-align: start;
+  .swiper-container {
+    width: 900px;
   }
   .front-page-profession {
     font-size: 70px;
