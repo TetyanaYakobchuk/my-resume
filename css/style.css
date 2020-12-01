@@ -392,7 +392,7 @@ body {
   line-height: 42px;
   text-transform: uppercase;
   text-align: center;
-  color: var(--txt-c-light);
+  color: var(--c-green-light);
   margin-bottom: 20px;
 }
 .front-page-description {
@@ -1028,6 +1028,10 @@ body {
   .swiper-container {
     width: 600px;
   }
+  .logo-link {
+    width: 160px;
+    position: sticky;
+  }
   .front-page-profession {
     margin: 20px 0 30px 0;
     font-size: 55px;
@@ -1249,7 +1253,10 @@ body {
   .experience-wrapper {
     order: 1;
   }
-
+  .logo-link {
+    width: 260px;
+    position: sticky;
+  }
   .front-page-main-info {
     align-items: flex-start;
     order: 2;
@@ -1300,6 +1307,7 @@ body {
   .front-page-my-name {
     margin-top: 0;
     z-index: 2;
+    text-align: left;
   }
   .experience-title {
     text-align: left;
