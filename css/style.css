@@ -1,18 +1,18 @@
 :root {
   /* background */
-  --c-dark: #141d2d;
-  --c-light: #fff;
+  --c-dark: #27484d;
+  --c-light: #cfe4e3;
   --c-accent: #ff6b08;
 
-  --c-dark-blue: #253045;
-  --c-grey-blue: #4a5771;
-  --c-grey-light: #f1f2f2;
-  --c-grey: #bcc1d2;
+  --c-dark-green: #006561;
+  --c-grey-blue: #1d7471;
+  --c-green-light: #5bc0bd;
+  --c-grey: #a7cccb;
 
   /* text */
   --txt-c-dark: var(--c-dark);
-  --txt-c-grey: #4f5b70;
-  --txt-c-grey-light: var(--c-grey-light);
+  --txt-c-green: #4f5b70;
+  --txt-c-green-light: var(--c-green-light);
   --txt-c-accent: var(--c-accent);
   --txt-c-light: var(--c-light);
 
@@ -83,10 +83,10 @@ body {
 }
 
 .desktop-element {
-  display: none !important; /* пришлось поставить чтоб перебить стрелочки для свайпа на моб версии */
+  display: none; /* пришлось поставить !important чтоб перебить стрелочки для свайпа на моб версии */
 }
 .mobile-element {
-  display: block !important; /* и оставить их в планшетной и десктопной версии*/
+  display: block; /* и оставить их в планшетной и десктопной версии*/
 }
 .accent-btn {
   background: var(--c-accent);
@@ -171,7 +171,7 @@ body {
 .modal-close-btn {
   font-size: 18px;
   position: absolute;
-  color: var(--c-grey-blue);
+  color: var(--c-grey-green);
   top: 16px;
   right: 16px;
   cursor: pointer;
@@ -537,7 +537,7 @@ body {
   line-height: 19px;
 }
 .experience-dots-item {
-  color: var(--c-grey-blue);
+  color: var(--c-grey-green);
   font-size: 8px;
   margin-right: 5px;
 }
@@ -579,7 +579,7 @@ body {
 }
 
 .about-descr span {
-  background: var(--c-dark-blue);
+  background: var(--c-dark-green);
   padding: 4px 9px;
 }
 
@@ -607,7 +607,7 @@ body {
   font-size: 150px;
   line-height: 180px;
   text-transform: uppercase;
-  color: var(--txt-c-grey-light);
+  color: var(--txt-c-green-light);
   writing-mode: tb-rl;
   margin: auto;
   position: relative;
@@ -628,7 +628,7 @@ body {
 
 .personal-project-item-container {
   padding-top: 40px;
-  background: var(--c-dark-blue);
+  background: var(--c-dark-green);
   border-radius: 5px 5px 0 0;
   position: relative;
 }
@@ -658,7 +658,7 @@ body {
 }
 
 .personal-project-item {
-  border-bottom: 1px solid var(--c-grey-blue);
+  border-bottom: 1px solid var(--c-grey-green);
   margin-bottom: 30px;
 }
 
@@ -670,7 +670,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--c-grey-blue);
+  background: var(--c-grey-green);
   margin-right: 7px;
 }
 
@@ -719,7 +719,7 @@ body {
   font-size: 150px;
   line-height: 180px;
   text-transform: uppercase;
-  color: var(--txt-c-grey-light);
+  color: var(--txt-c-green-light);
   z-index: -1;
 }
 
@@ -733,7 +733,7 @@ body {
 }
 
 .team-project-item {
-  border-bottom: 1px solid var(--c-grey-light);
+  border-bottom: 1px solid var(--c-green-light);
   margin-bottom: 30px;
 }
 
@@ -786,9 +786,9 @@ body {
   border: none;
   outline: none;
   padding: 10px 10px 15px 10px;
-  border-bottom: 1px solid var(--c-grey-blue);
+  border-bottom: 1px solid var(--c-grey-green);
   text-align: center;
-  color: var(--c-grey-blue);
+  color: var(--c-grey-green);
   margin-bottom: 30px;
 }
 
@@ -875,7 +875,7 @@ body {
 .calculator-form-select {
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--c-grey-light);
+  border-bottom: 1px solid var(--c-green-light);
   padding: 5px 0px 17px 0px;
 }
 .calculator-form-input-radio-container {
@@ -1018,10 +1018,10 @@ body {
     min-width: 640px;
   }
   .mobile-element {
-    display: none !important;
+    display: none;
   }
   .tablet-element {
-    display: block !important;
+    display: block;
   }
   .swiper-container {
     width: 600px;
@@ -1231,7 +1231,7 @@ body {
     display: none;
   }
   .desktop-element {
-    display: block !important;
+    display: block;
   }
   .swiper-container {
     width: 900px;
@@ -1297,6 +1297,7 @@ body {
   }
   .front-page-my-name {
     margin-top: 0;
+    z-index: 2;
   }
   .experience-title {
     text-align: left;
