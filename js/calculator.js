@@ -1,6 +1,7 @@
-const technologiesSelect = document.querySelector('#calculator-form-technologies');
+const technologiesSelect = document.querySelector('#calculator-form-technologies'); //написала в переменную результат селектора
 
-const technologiesMultiSelect = new Choices(technologiesSelect, {
+// -----взяла с multiselect-bollerplate.js
+const technologiesMultiSelect = new Choices(technologiesSelect, { //инициализировала мультиселект
   allowSearch: false,
   silent: false,
   renderChoiceLimit: -1,
@@ -21,42 +22,43 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
   placeholder: true,
   noChoicesText: "No available options",
   itemSelectText: "Click to select",
-  classNames: {
-    containerInner: "choices__inner tech-input-container",
+  classNames: { //добавила свои классы чтобы синхронизировать html с нужными классами, которые нужны библиотеке
+    containerInner: "choices__inner tech-input-container", 
     input: "choices__input",
   },
 });
+//----------------------------------
+
 
 calculateSum();
 
 const calculatorForm = document.querySelector('.calculator-form');
 
 
-calculatorForm.addEventListener('submit', function (event) {
-  event.preventDefault(); //чтоб не выбрасывало на начало сайта
+calculatorForm.addEventListener('submit', function (event) { //срабатывает слушатель на событие submit (при нажатии на кнопку "find out...")
+  event.preventDefault(); //чтоб не выбрасывало на верх сайта
   calculateSum();
 
 });
 
 
 function calculateSum() {
-  // Selectors
-  const websiteTypeSelect = document.querySelector('#calculator-form-website-type');
-  const websiteCart = document.querySelector('#calculator-form-input-cart input:checked');
-  const websiteReseption = document.querySelector('#calculator-form-input-reseption input:checked');
+  // Селекторы
+  const websiteTypeSelect = document.querySelector('#calculator-form-website-type'); //выбранный тип сайта
+  const websiteCart = document.querySelector('#calculator-form-input-cart input:checked'); //выбранный радиобаттон
+  const websiteReseption = document.querySelector('#calculator-form-input-reseption input:checked'); //выбранный радиобаттон
   
 
-  // Values
+  // Значения
   const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value);
-  const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue());
-  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);
+  const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue()); //собрали выбранные значения
+  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);//выбирает значение которое отмечено
   const websiteReseptionValue = convertReseptionOptionToPrice(websiteReseption.value);
 
   const totalSum = websiteTypeValue + technologiesValue + websiteCartValue + websiteReseptionValue;
   
   renderSum(totalSum);
 }
-
 
 
 function renderSum(sum) {
