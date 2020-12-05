@@ -1,4 +1,5 @@
-const technologiesSelect = document.querySelector('#calculator-form-technologies'); //написала в переменную результат селектора
+//написала в переменную результат селектора
+const technologiesSelect = document.querySelector('#calculator-form-technologies');
 
 // -----взяла с multiselect-bollerplate.js
 const technologiesMultiSelect = new Choices(technologiesSelect, { //инициализировала мультиселект
@@ -34,8 +35,7 @@ calculateSum();
 
 const calculatorForm = document.querySelector('.calculator-form');
 
-
-calculatorForm.addEventListener('submit', function (event) { //срабатывает слушатель на событие submit (при нажатии на кнопку "find out...")
+calculatorForm.addEventListener('submit', function (event) { 
   event.preventDefault(); //чтоб не выбрасывало на верх сайта
   calculateSum();
 
@@ -44,16 +44,16 @@ calculatorForm.addEventListener('submit', function (event) { //срабатыв�
 
 function calculateSum() {
   // Селекторы
-  const websiteTypeSelect = document.querySelector('#calculator-form-website-type'); //выбранный тип сайта
+  const websiteTypeSelect = document.querySelector('#calculator-form-website-type'); //нашли выбранный тип сайта
   const websiteCart = document.querySelector('#calculator-form-input-cart input:checked'); //выбранный радиобаттон
   const websiteReseption = document.querySelector('#calculator-form-input-reseption input:checked'); //выбранный радиобаттон
   
 
   // Значения
-  const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value);
+  const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value); //выбранный типа сайта
   const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue()); //собрали выбранные значения
-  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);//выбирает значение которое отмечено
-  const websiteReseptionValue = convertReseptionOptionToPrice(websiteReseption.value);
+  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);//выбирает значение которое отмечено в радиобаттоне
+  const websiteReseptionValue = convertReseptionOptionToPrice(websiteReseption.value); 
 
   const totalSum = websiteTypeValue + technologiesValue + websiteCartValue + websiteReseptionValue;
   
@@ -66,7 +66,7 @@ function renderSum(sum) {
   
   costElement.textContent = 'Calculating...';
 
-  setTimeout(function () { 
+  setTimeout(function () { //искусственная задержка
     costElement.textContent = sum + '$';
   }, 2000);
 
@@ -75,7 +75,7 @@ function renderSum(sum) {
 
 
 
-function convertCartOptionToPrice(option) {
+function convertCartOptionToPrice(option) { //значение радиобаттона shopping cart конвертируем в число
   if (option === 'yes') { 
     return 300;
   }
@@ -83,7 +83,7 @@ function convertCartOptionToPrice(option) {
 }
 
 
-function convertReseptionOptionToPrice(option) {
+function convertReseptionOptionToPrice(option) { //значение радиобаттона reception конвертируем в число
   if (option === 'yes') { 
     return 500;
   }
@@ -94,13 +94,11 @@ function convertReseptionOptionToPrice(option) {
 function getTechnologiesSum(technologiesArr) {
   let totalSum = 0;
 
-  technologiesArr.forEach(function (tech) { 
-    totalSum = totalSum + extractPriceFromValue(tech.value)
+  technologiesArr.forEach(function (tech) { //перебор массива с технологиями
+    totalSum = totalSum + extractPriceFromValue(tech.value) 
   })
   return totalSum;
 }
-
-
 
 function extractPriceFromValue(str) {
   const price = str.match(/:\d+/);
