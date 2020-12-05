@@ -27,7 +27,7 @@
   --mobile: calc(300px + var(--vertical-scroll));
   --tablet: calc(640px + var(--vertical-scroll));
   --desktop: calc(900px + var(--vertical-scroll));
-  --desktop-lg: calc(1270px + var(--vertical-scroll));
+  --desktop-lg: calc(1600px + var(--vertical-scroll));
 
   /* animation */
   --animation-fast: 0.1s;
@@ -697,6 +697,7 @@ body {
   margin-bottom: 30px;
 }
 /* TEAM PROJECT */
+
 /* .team-projects {
   width: min-content;
 } */
@@ -1139,6 +1140,7 @@ body {
 
   .callback-form-container {
     padding: 75px 30px 80px 30px;
+    width: auto;
   }
   .callback-form-title {
     font-size: 36px;
@@ -1232,6 +1234,9 @@ body {
 @media only screen and (min-width: 1000px) {
   .container {
     max-width: var(--desktop-lg);
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0;
   }
   .tablet-element {
     display: none;
@@ -1370,6 +1375,10 @@ body {
   .about-text:last-child {
     width: 388px;
   }
+  /* .callback-form-container {
+    padding: 75px 30px 80px 30px;
+    max-width: var(--desktop-lg);
+  } */
   .callback-form-title {
     width: 100%;
   }
