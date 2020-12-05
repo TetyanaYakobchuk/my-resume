@@ -1,5 +1,5 @@
 const callbackForm = document.querySelector('.callback-form-container');
-const requestReceivedModal = document.querySelector('#request-received');
+const requestReceivedModal = document.querySelector('#request-received'); //модалка
 
 const userName = document.querySelector('#callback-form-input-name');
 const userEmail = document.querySelector('#callback-form-input-email');
@@ -16,19 +16,19 @@ userPhone.addEventListener('blur', function() { //кликнули вне эле
         userPhone.value = '';
     }
 });
-
+//проверка введенных данных
 callbackForm.addEventListener('submit', function(event){
-    event.preventDefault();
+    event.preventDefault(); 
     let hasError = false;
-
-    if (!userName.value.trim()) { //убрала пробелы
-        userName.classList.add('callback-form-input-error'); //подсветила ошибку красным
+//проверяю на пустую строку
+    if (!userName.value.trim()) {
+        userName.classList.add('callback-form-input-error'); //подсветила ошибку красным бордером
         hasError = true;
     } else {
         userName.classList.remove('callback-form-input-error');
     }
 
-    if (!userEmail.value.trim() || !isEmailValid(userEmail.value)) {
+    if (!userEmail.value.trim() || !isEmailValid(userEmail.value)) {// проверила нет ли пустого значения или невалидного тел
         userEmail.classList.add('callback-form-input-error');
         hasError = true;
     } else {
@@ -42,8 +42,6 @@ callbackForm.addEventListener('submit', function(event){
         userPhone.classList.remove('callback-form-input-error');
     }
 
-
-    
     if (hasError) {
         return;
     }
@@ -52,7 +50,7 @@ callbackForm.addEventListener('submit', function(event){
     userEmail.value = '';
     userPhone.value = '';
 
-    requestReceivedModal.classList.add('modal-active');
+    requestReceivedModal.classList.add('modal-active');//показывается модалка 
 
     setTimeout(function() {
         requestReceivedModal.classList.remove('modal-active');
