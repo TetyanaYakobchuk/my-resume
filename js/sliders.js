@@ -5,7 +5,7 @@ var mySwiper = new Swiper('.swiper-container', {
   effect: 'slide',
   grabCursor: true,
   
-  // If we need pagination
+  // If we need pagination (точечки внизу слайдера, указывают где мы сейчас)
   pagination: {
     el: '.swiper-pagination',
   },
