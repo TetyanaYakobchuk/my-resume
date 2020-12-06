@@ -1,13 +1,13 @@
 :root {
   /* background */
   --c-dark: #27484d;
-  --c-light: #cfe4e3;
-  --c-accent: #ff6b08;
+  --c-light: #e3f3f3;
+  --c-accent: #f76503;
 
   --c-dark-green: #006561;
   --c-grey-blue: #1d7471;
   --c-green-light: #5bc0bd;
-  --c-grey: #a7cccb;
+  --c-grey: #bbc2c1;
 
   /* text */
   --txt-c-dark: var(--c-dark);
@@ -17,7 +17,7 @@
   --txt-c-light: var(--c-light);
 
   /* modals */
-  --modal-bgd-dark: rgba(20, 29, 45, 0.8);
+  --modal-bgd-dark: rgba(29, 65, 60, 0.8);
 
   /* font */
   --font-main: "Acrom", sans-serif;
