@@ -32,13 +32,13 @@
 'use strict';
 
 // -------------- Tagify ---------------- //
-
+//написала в переменную (const calculatorForm) селектор ('.calculator-form’)(index.html 412);
 const calculatorForm = document.querySelector('.calculator-form');
 
 // Массив для записи технологий (по умолчанию 3)
 let technologiesArr = ['React', 'JS', 'CSS'];
 
-// Подключаем Tagify по инструкции
+// Подключаем Tagify по инструкции 
 var input = document.querySelector('#calculator-form-technologies'),
   tagify = new Tagify(input, {
     originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(','),
@@ -65,6 +65,8 @@ function setArr(data) {
 
 //const calculatorForm = document.querySelector('.calculator-form');
 
+//Когда пользователь нажимает кнопку "find out..." срабатывает слушатель на событие submit (calculator.js(39))(index.html 482).
+//Вторым параметром оно принимает функцию(event), а функция принимает сам объект с событием в котором есть много опций. 
 calculatorForm.addEventListener('submit', function (event) { 
   event.preventDefault(); //чтоб не выбрасывало на верх сайта
   calculateSum();
@@ -75,8 +77,8 @@ calculatorForm.addEventListener('submit', function (event) {
 function calculateSum() {
   // Селекторы
   const websiteTypeSelect = document.querySelector('#calculator-form-website-type'); //нашли выбранный тип сайта
-  const websiteCart = document.querySelector('#calculator-form-input-cart input:checked'); //выбранный радиобаттон
-  const websiteReseption = document.querySelector('#calculator-form-input-reseption input:checked'); //выбранный радиобаттон
+  const websiteCart = document.querySelector('#calculator-form-input-cart input:checked'); //выбранный радиобаттон cart
+  const websiteReseption = document.querySelector('#calculator-form-input-reseption input:checked'); //выбранный радиобаттон reseption
   
 
   // Значения
