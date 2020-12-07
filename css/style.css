@@ -34,7 +34,7 @@
   --animation-slow: 0.3s;
   --animation-transition: all 0.2s ease-in-out; /* плавный вход-выход */
 }
-
+/* шрифты */
 @font-face {
   font-family: "Acrom";
   src: url("../fonts/acrom/Acrom-ExtraBold.eot");
