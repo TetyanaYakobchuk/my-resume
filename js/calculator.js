@@ -1,39 +1,69 @@
-//написала в переменную результат селектора
-const technologiesSelect = document.querySelector('#calculator-form-technologies');
+// написала в переменную результат селектора
+// const technologiesSelect = document.querySelector('#calculator-form-technologies');
 
-// -----взяла с multiselect-bollerplate.js
-const technologiesMultiSelect = new Choices(technologiesSelect, { //инициализировала мультиселект
-  allowSearch: false,
-  silent: false,
-  renderChoiceLimit: -1,
-  maxItemCount: -1,
-  removeItems: true,
-  removeItemButton: true,
-  editItems: false,
-  duplicateItemsAllowed: false,
-  delimiter: ",",
-  paste: true,
-  searchEnabled: false,
-  searchChoices: true,
-  searchResultLimit: -1,
-  position: "auto",
-  resetScrollPosition: true,
-  shouldSort: true,
-  shouldSortItems: false,
-  placeholder: true,
-  noChoicesText: "No available options",
-  itemSelectText: "Click to select",
-  classNames: { //добавила свои классы чтобы синхронизировать html с нужными классами, которые нужны библиотеке
-    containerInner: "choices__inner tech-input-container", 
-    input: "choices__input",
-  },
-});
-//----------------------------------
+// взяла с multiselect-bollerplate.js
+// const technologiesMultiSelect = new Choices(technologiesSelect, { //инициализировала мультиселект
+//   allowSearch: false,
+//   silent: false,
+//   renderChoiceLimit: -1,
+//   maxItemCount: -1,
+//   removeItems: true,
+//   removeItemButton: true,
+//   editItems: false,
+//   duplicateItemsAllowed: false,
+//   delimiter: ",",
+//   paste: true,
+//   searchEnabled: false,
+//   searchChoices: true,
+//   searchResultLimit: -1,
+//   position: "auto",
+//   resetScrollPosition: true,
+//   shouldSort: true,
+//   shouldSortItems: false,
+//   placeholder: true,
+//   noChoicesText: "No available options",
+//   itemSelectText: "Click to select",
+//   classNames: { добавила свои классы чтобы синхронизировать html с нужными классами, которые нужны библиотеке
+//     containerInner: "choices__inner tech-input-container", 
+//     input: "choices__input",
+//   },
+// });
 
+'use strict';
 
-calculateSum();
+// -------------- Tagify ---------------- //
 
 const calculatorForm = document.querySelector('.calculator-form');
+
+// Массив для записи технологий (по умолчанию 3)
+let technologiesArr = ['React', 'JS', 'CSS'];
+
+// Подключаем Tagify по инструкции
+var input = document.querySelector('#calculator-form-technologies'),
+  tagify = new Tagify(input, {
+    originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(','),
+    whitelist: ['HTML', 'CSS', 'JS', 'React', 'Angular', 'PHP'],
+    dropdown: {
+      enabled: 0,
+      maxItems: 6,
+      position: "text",
+      closeOnSelect: false,
+      highlightFirst: true
+    }
+});
+
+// Обработка при добавлении технологий в форму
+input.addEventListener('change', e => setArr(e.target.value));
+
+// Функция изменения массива при добавлении технологии
+function setArr(data) {
+  technologiesArr = data.split(',');
+}
+
+// ---------------------------------------- //
+
+
+//const calculatorForm = document.querySelector('.calculator-form');
 
 calculatorForm.addEventListener('submit', function (event) { 
   event.preventDefault(); //чтоб не выбрасывало на верх сайта
@@ -51,13 +81,46 @@ function calculateSum() {
 
   // Значения
   const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value); //выбранный типа сайта
-  const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue()); //собрали выбранные значения
   const websiteCartValue = convertCartOptionToPrice(websiteCart.value);//выбирает значение которое отмечено в радиобаттоне
   const websiteReseptionValue = convertReseptionOptionToPrice(websiteReseption.value); 
+  //const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue()); //собрали выбранные значения
+  const technologiesValue =  getTechnologiesSum(technologiesArr); // Передаем массив с технологиями
+  //собрали выбранные значения
 
+  
   const totalSum = websiteTypeValue + technologiesValue + websiteCartValue + websiteReseptionValue;
   
   renderSum(totalSum);
+}
+
+
+function getTechnologiesSum(technologiesArr) { // Расcчет конечной суммы технологий
+  let totalSum = 0;
+
+  technologiesArr.forEach( item => {
+    switch(item){
+      case 'HTML':
+        totalSum += 500;
+        break;
+      case 'CSS':
+        totalSum += 500;
+        break;
+      case 'JS':
+        totalSum += 700;
+        break;
+      case 'React':
+        totalSum += 1000;
+        break;
+      case 'Angular':
+        totalSum += 1000;
+        break;
+      case 'PHP':
+        totalSum += 2000;
+        break;
+    }
+  });
+
+  return totalSum;
 }
 
 
@@ -91,14 +154,14 @@ function convertReseptionOptionToPrice(option) { //значение радиоб
 }
 
 
-function getTechnologiesSum(technologiesArr) {
-  let totalSum = 0;
+// function getTechnologiesSum(technologiesArr) {
+//   let totalSum = 0;
 
-  technologiesArr.forEach(function (tech) { //перебор массива с технологиями
-    totalSum = totalSum + extractPriceFromValue(tech.value) 
-  })
-  return totalSum;
-}
+//   technologiesArr.forEach(function (tech) { //перебор массива с технологиями
+//     totalSum = totalSum + extractPriceFromValue(tech.value) 
+//   })
+//   return totalSum;
+// }
 
 function extractPriceFromValue(str) {
   const price = str.match(/:\d+/);
@@ -108,4 +171,6 @@ function extractPriceFromValue(str) {
   }
 
   return 0;
-  }
+}
+  
+calculateSum();
